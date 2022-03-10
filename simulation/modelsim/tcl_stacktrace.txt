@@ -1,0 +1,18 @@
+Sun Dec 27 2:44:29 PM Egypt Standard Time 2020
+Trace back: can't set "RunLength": Bad time value
+    while executing
+"set $varName $vsimPriv(dlg_$varName)"
+    (procedure "Transcript::SimOptionsApply" line 19)
+    invoked from within
+"Transcript::SimOptionsApply"
+    invoked from within
+".simoption.bb.apply invoke"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel #0 [list $w invoke]"
+    (procedure "tk::ButtonUp" line 24)
+    invoked from within
+"tk::ButtonUp .simoption.bb.apply"
+    (command bound to event)
+  <2: ::tkerror {can't set "RunLength": Bad time value}
+  <1: ::bgerror {can't set "RunLength": Bad time value}

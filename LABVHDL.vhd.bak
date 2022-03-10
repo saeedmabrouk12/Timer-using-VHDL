@@ -1,0 +1,24 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity LABVHDL is 
+port (R_in , clk , load : in std_logic ;
+D : in std_logic_vector (3 downto 0);
+Q : inout std_logic_vector (3 downto 0));
+
+end R_shift ;
+
+architecture output of LABVHDL is 
+
+begin 
+process (clk)
+begin 
+     if (clk 'event and clk ='1' ) then 
+	  if (load = '1' ) then 
+	  Q <= D ;
+	  elsif (load = '0') then 
+	  Q <=  R_in & Q(3 downto 1 )  ;
+	  end if ;
+	  end if ;
+	  end process;
+	  end output;

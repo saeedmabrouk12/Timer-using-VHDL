@@ -1,0 +1,47 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do LABVHDL_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/saeed fares/Desktop/LABVHDL/LABVHDL.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LABVHDL
+# -- Compiling architecture behavioural of LABVHDL
+# 
+vsim work.labvhdl
+# vsim work.labvhdl 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.labvhdl(behavioural)
+add wave -position insertpoint sim:/labvhdl/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: saeed fares  Hostname: SAEED  ProcessID: 20988
+# 
+#           Attempting to use alternate WLF file "./wlftjgdikf".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftjgdikf
+# 
+force -freeze sim:/labvhdl/clk 1 0, 0 {500000000000 ps} -r 1000000000000
+force -freeze sim:/labvhdl/start_stop 1 0
+force -freeze sim:/labvhdl/min_in 000111 0
+force -freeze sim:/labvhdl/sec_in 000011 0
+run
+restart
+force -freeze sim:/labvhdl/clk 1 0, 0 {500000000000 ps} -r 1000000000000
+force -freeze sim:/labvhdl/start_stop 1 0
+force -freeze sim:/labvhdl/min_in 000010 0
+force -freeze sim:/labvhdl/sec_in 000111 0
+run
